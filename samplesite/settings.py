@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bboard.apps.BboardConfig',
     'bootstrap4',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
