@@ -5,6 +5,7 @@ from .views import *
 
 router = DefaultRouter()
 router.register('rubrics', APIRubricViewSet)
+router.register('bbs', APIBbViewSet)
 
 
 urlpatterns = [
@@ -24,9 +25,10 @@ urlpatterns = [
 
     path('api/', include(router.urls)),
     # path('api/rubrics/', api_rubrics),
-    path('api/rubrics/', APIRubrics.as_view()),
-    path('api/bbs/', APIBbs.as_view()),
-    path('api/bbs/<int:rubric_id>/', api_bbs_by_rubric),
+
+    # path('api/bbs/', APIBbs.as_view()),
+    # path('api/bbs/<int:rubric_id>/', api_bbs_by_rubric),
+
     # path('api/bbs/<int:rubric_id>/', APIBBsByRubric.as_view()),
     # path('api/bb/<int:pk>/', api_bb_detail),
     path('api/bb/<int:pk>/', APIBbDetail.as_view()),

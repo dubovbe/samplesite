@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Rubric, Bb
 
 
-class RubricSerializer(serializers.ModelSerializer):
+class RubricSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Rubric
         fields = ('id', 'name')
